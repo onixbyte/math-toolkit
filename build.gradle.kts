@@ -116,15 +116,15 @@ publishing {
             }
         }
 
-        // repositories {
-        //     maven {
-        //         name = "sonatypeNexus"
-        //         url = URI(providers.gradleProperty("repo.maven-central.host").get())
-        //         credentials {
-        //             username = providers.gradleProperty("repo.maven-central.username").get()
-        //             password = providers.gradleProperty("repo.maven-central.password").get()
-        //         }
-        //     }
-        // }
+        repositories {
+            maven {
+                name = "sonatypeNexus"
+                url = URI(providers.gradleProperty("repo.maven-central.host").get())
+                credentials {
+                    username = providers.gradleProperty("repo.maven-central.username").get()
+                    password = providers.gradleProperty("repo.maven-central.password").get()
+                }
+            }
+        }
     }
 }
